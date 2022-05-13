@@ -1,0 +1,20 @@
+datahub-metrics: 
+  ingress:
+    enabled: false
+
+
+datahub_metrics:
+  ingress_path: /gpu/metrics
+  port: 80
+
+kube_state_metrics:
+  ingress_path: /
+  port: 80
+
+kube-state-metrics:
+  service:
+    port: 80
+    
+
+
+

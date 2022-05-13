@@ -1,0 +1,25 @@
+apiVersion: networking.k8s.io/v1
+kind: Ingress
+metadata:
+  name: ets-metrics-ingress
+  annotations:
+    nginx.ingress.kubernetes.io/ssl-redirect: \"false\"
+spec:
+  rules:
+  - http:
+      paths:
+      - path: {{.Values.datahub_metrics.ingress_path}}
+        pathType: Prefix
+        backend:
+          service:
+            name: {{ .Release.Name }}-datahub-metrics
+            port: 
+              number: {{.Values.datahub_metrics.port}}
+
+      - path: {{.Values.kube_state_metrics.ingress_path}}
+        pathType: Prefix
+        backend:
+          service:
+            name: {{ .Release.Name }}-kube-state-metrics
+            port: 
+              number: {{.Values.kube_state_metrics.port}}
