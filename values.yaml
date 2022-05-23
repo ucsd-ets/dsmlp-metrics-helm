@@ -1,9 +1,9 @@
-datahub-metrics: 
+gpu-stats-collector: 
   ingress:
     enabled: false
 
 
-datahub_metrics:
+gpu_stats_collector:
   ingress_path: /gpu/metrics
   port: 80
 

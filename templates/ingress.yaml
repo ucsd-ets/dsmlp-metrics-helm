@@ -8,13 +8,13 @@ spec:
   rules:
   - http:
       paths:
-      - path: {{.Values.datahub_metrics.ingress_path}}
+      - path: {{.Values.gpu_stats_collector.ingress_path}}
         pathType: Prefix
         backend:
           service:
-            name: {{ .Release.Name }}-datahub-metrics
+            name: {{ .Release.Name }}-gpu-stats-collector
             port: 
-              number: {{.Values.datahub_metrics.port}}
+              number: {{.Values.gpu_stats_collector.port}}
 
       - path: {{.Values.kube_state_metrics.ingress_path}}
         pathType: Prefix
