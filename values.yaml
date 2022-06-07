@@ -14,7 +14,7 @@ kube_state_metrics:
 kube-state-metrics:
   service:
     port: 80
-    
 
-
-
+tls:
+  crt:
+  key:

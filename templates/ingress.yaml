@@ -5,8 +5,14 @@ metadata:
   annotations:
     nginx.ingress.kubernetes.io/ssl-redirect: \"false\"
 spec:
+  ingressClassName: nginx
+  tls:
+  - hosts:
+      - ets-metrics-dev.ucsd.edu
+    secretName: ets-metrics-dev
   rules:
-  - http:
+  - host: ets-metrics-dev.ucsd.edu
+    http:
       paths:
       - path: {{.Values.gpu_stats_collector.ingress_path}}
         pathType: Prefix

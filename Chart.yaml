@@ -28,6 +28,6 @@ dependencies:
     version: ^2.0.0
     repository: https://charts.bitnami.com/bitnami
 
-  - name: datahub-metrics
+  - name: gpu-stats-collector
     version: ^0.1.0
-    repository: "file:///home/sumukh/ETS/datahub-metrics"
+    repository: "file:///home/ssbadam/gpu-stats-collector-helmfile"
