@@ -1,7 +1,11 @@
 gpu-stats-collector: 
   ingress:
     enabled: false
-
+  image:
+    repository: ghcr.io/ucsd-ets/gpu_stats_collector
+    pullPolicy: IfNotPresent
+    # Overrides the image tag whose default is the chart appVersion.
+    tag: "gpu-fix"
 
 gpu_stats_collector:
   ingress_path: /gpu/metrics
@@ -14,6 +18,35 @@ kube_state_metrics:
 kube-state-metrics:
   service:
     port: 80
+  kubeResources:
+    certificatesigningrequests: false
+    configmaps: false
+    cronjobs: true
+    daemonsets: true
+    deployments: true
+    endpoints: false
+    horizontalpodautoscalers: false
+    ingresses: false
+    jobs: true
+    limitranges: false
+    mutatingwebhookconfigurations: false
+    namespaces: true
+    networkpolicies: false
+    nodes: true
+    persistentvolumeclaims: false
+    persistentvolumes: false
+    poddisruptionbudgets: false
+    pods: true
+    replicasets: true
+    replicationcontrollers: false
+    resourcequotas: false
+    secrets: false
+    services: false
+    statefulsets: false
+    storageclasses: false
+    verticalpodautoscalers: false
+    validatingwebhookconfigurations: false
+    volumeattachments: false
 
 tls:
   crt:

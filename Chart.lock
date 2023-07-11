@@ -1,9 +1,9 @@
 dependencies:
 - name: kube-state-metrics
   repository: https://charts.bitnami.com/bitnami
-  version: 2.2.19
-- name: datahub-metrics
-  repository: file:///home/sumukh/ETS/datahub-metrics
+  version: 2.2.24
+- name: gpu-stats-collector
+  repository: file:///home/ssbadam/gpu-stats-collector-helmfile
   version: 0.1.0
-digest: sha256:bfc4d618a46c9fe3f7031a60f2259ae0a94dc2c805dee0aa5cd4bc732c89fd09
-generated: "2022-05-09T14:16:56.215058879-07:00"
+digest: sha256:ff7b42d0488bad1331fddf6849cad4f228f7510deff5cb1bacdd3e95a16bbc42
+generated: "2022-06-07T12:56:33.487848788-07:00"

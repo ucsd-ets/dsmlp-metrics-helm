@@ -8,10 +8,10 @@ spec:
   ingressClassName: nginx
   tls:
   - hosts:
-      - ets-metrics-dev.ucsd.edu
-    secretName: ets-metrics-dev
+      - ets-metrics.ucsd.edu
+    secretName: ets-metrics
   rules:
-  - host: ets-metrics-dev.ucsd.edu
+  - host: ets-metrics.ucsd.edu
     http:
       paths:
       - path: {{.Values.gpu_stats_collector.ingress_path}}
